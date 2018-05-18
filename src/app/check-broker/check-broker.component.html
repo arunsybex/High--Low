@@ -1,0 +1,4 @@
+<form #myForm="ngForm" (ngSubmit)="regbroker(myForm.value)">
+    <label for="amount">Enter Ethre:</label><input type="text" name="amount" id="amount" [(ngModel)]="amount" >
+    <button type="submit">Register As Broker</button>
+</form>
