@@ -14,8 +14,7 @@ const routes: Routes = [
   },
   {
     path:"add_broker",
-    component:CheckBrokerComponent,
-    canActivate : [!BrokerGuard]
+    component:CheckBrokerComponent
   },
   {
     path:"metamask",

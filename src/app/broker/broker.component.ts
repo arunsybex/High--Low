@@ -32,14 +32,14 @@ export class BrokerComponent implements OnInit {
         this.service.game_set_map(item).then(obj => {
           console.log(obj);
 
-          var name=obj[0];
-          var s = '';
-          for (var k= 0; k < name.length; k += 2)
-          {
-            s+= String.fromCharCode(parseInt(name.substr(k, 2), 16));
-          }
+          // var name=obj[0];
+          // var s = '';
+          // for (var k= 0; k < name.length; k += 2)
+          // {
+          //   s+= String.fromCharCode(parseInt(name.substr(k, 2), 16));
+          // }
           
-          this.total_game.push({"broker_name":s})
+          this.total_game.push({"broker_name":obj[0]})
         });
       });
     })

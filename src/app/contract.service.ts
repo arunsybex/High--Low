@@ -131,11 +131,12 @@ export class ContractService {
 
   public async game_set_map(gid):Promise<object>{
     return new Promise((resolve, reject) => {
+      let _web3 = this._web3;
       this.contract.game_set_map.call(gid,function (error,result) {
         if(error){    
           reject(error); 
         } 
-
+        result[0] = _web3.toAscii(result[0])
         resolve(result);
       });
     })as Promise<object>;
